@@ -23,6 +23,9 @@ export class Movie extends Audit{
     @OneToMany(() => MoviesGenre, (moviesGenre) => moviesGenre.movie)
     moviesGenre: MoviesGenre[]
 
+    @Column('text')
+    image: string
+    
     //review
     @OneToMany(() => Review, (review) => review.movie)
     review: Review;
